@@ -30,21 +30,16 @@ var canSex = {
     }
 }
 
-// Inheritance:
-var person = Object.assign({}, canEat, canWalk, canSwim)
-person.name = "Delower"
-console.log(person)
+// // Inheritance:
+// var person = Object.assign({}, canEat, canWalk, canSwim)
+// person.name = "Delower"
+// console.log(person)
 
 // Composition:
 
 function Person(name){
     this.name = name
 }
-
-// Object.assign(Person.prototype, canEat, canSwim, canWalk)
-// var p1 = new Person("Delower")
-// p1.Eat()
-// console.log(p1)
 
 mixin(Person.prototype, canEat, canWalk)
 
